@@ -16,6 +16,7 @@ const getArticleBySlug=(req,res)=>{
     let article
     con.query(sql,(err,result)=>{
         if (err) throw err;
+        article=result
         res.render('article',{
             article:result
         })
